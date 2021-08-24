@@ -5,6 +5,21 @@
 
 <ul>
     <p *ngFor="let city of citys">{{city}}</p>
-
-
 </ul>
+
+<ul>
+    <p *ngFor="let person of people; let i = index; let odd=odd">{{person.name}} ---{{i}}----{{odd}}; tarckBy:trackById</p>
+</ul>
+
+<!--ngSwitch 由ngSwitch NgSwitchCase NgSwitchDefault组成-->
+<span [ngSwitch]="charScore">
+<p *ngSwitchCase="'A'"><!--Swtich变量只用双引号表示对象，使用双引号加单引号表示字符-->
+    你的成绩是A，太A了
+</p>
+<p *ngSwitchCase="'B'">
+    你的成绩是B,太菜了
+</p>
+<p *ngSwitchDefault>
+    啥也不是
+</p>
+</span>
