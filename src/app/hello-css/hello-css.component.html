@@ -1,0 +1,37 @@
+<!--使用ngstyle可以设置样式-->
+<!--[style.property] & [Ngstyle]--> 
+<!-- 编译错误
+    <span [style.color]="'red'">
+        hello-css works!
+    </span>
+ -->
+
+ <!--ngStyle可以直接使用一个对象-->
+ <p [ngStyle]="{'color': 'red','font-size':'30px'}">12313</p>
+
+ <p [ngStyle]="cssObject">12313</p>
+
+ <p class="container">
+    hello-css works!
+ </p>
+
+ <!--使用[class]时会默认是对象-->
+ <p [class]="'container'">
+    hello-css works!
+ </p>
+
+ <!--使用[class]可以进行逻辑判断-->
+ <p class="box" [class.container]="true">
+    123
+ </p>
+ <p class="box" [class.container]="false">
+    123
+ </p>
+ <p [ngClass]="{'box': true,'bg':'ture'}">
+    123
+ </p>
+
+ <!--ngNonBindable 不使用绑定-->
+<div>
+    
+</div>
